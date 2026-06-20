@@ -1,4 +1,4 @@
-# starrysy.github.io
+# Songlin Yang — starrysy.github.io
 
 Personal portfolio and blog built with Jekyll, hosted on GitHub Pages.
 
