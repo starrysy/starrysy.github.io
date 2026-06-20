@@ -1,0 +1,394 @@
+// ─── Tags ─────────────────────────────────────────────────────────────────────
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: $text-xs;
+  font-weight: 500;
+  color: $gray-600;
+  background: $gray-100;
+  padding: 3px 10px;
+  border-radius: $r-full;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.tag-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-2;
+}
+
+// ─── Icon links (social/action buttons) ───────────────────────────────────────
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-2;
+  font-size: $text-sm;
+  font-weight: 500;
+  color: $color-text-muted;
+  padding: 7px 14px;
+  border: 1px solid $color-border;
+  border-radius: $r-md;
+  transition: color $t-fast, border-color $t-fast, background $t-fast;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text;
+    border-color: $gray-300;
+    background: $gray-50;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+}
+
+// ─── Section chrome ───────────────────────────────────────────────────────────
+
+.section-label {
+  font-size: $text-xs;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text-faint;
+}
+
+// ─── Project card ─────────────────────────────────────────────────────────────
+
+.project-card {
+  border: 1px solid $color-border;
+  border-radius: $r-lg;
+  padding: $sp-5 $sp-6;
+  display: flex;
+  flex-direction: column;
+  transition: border-color $t-base, box-shadow $t-base;
+
+  &:hover {
+    border-color: $gray-300;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $sp-4;
+    margin-bottom: $sp-2;
+  }
+
+  .project-name {
+    font-size: $text-sm;
+    font-weight: 600;
+    color: $color-text;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+
+  .project-status {
+    font-size: $text-xs;
+    color: $color-text-faint;
+    white-space: nowrap;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .project-desc {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: $sp-4;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $sp-1;
+    font-size: $text-xs;
+    font-weight: 500;
+    color: $color-text-faint;
+    margin-top: $sp-3;
+    transition: color $t-fast;
+    &:hover { color: $color-accent; }
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $sp-4;
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// ─── Timeline (experience) ────────────────────────────────────────────────────
+
+.timeline {
+  position: relative;
+  padding-left: $sp-6;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: $color-border;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: $sp-10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: calc(-#{$sp-6} - 1px);
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: $r-full;
+    background: $color-bg;
+    border: 2px solid $gray-300;
+  }
+
+  &.is-current::before {
+    background: $color-accent;
+    border-color: $color-accent;
+  }
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.timeline-period {
+  font-size: $text-xs;
+  font-weight: 500;
+  color: $color-text-faint;
+  letter-spacing: 0.04em;
+  margin-bottom: $sp-1;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-title {
+  font-size: $text-base;
+  font-weight: 600;
+  color: $color-text;
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+.timeline-org {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  margin-bottom: $sp-3;
+}
+
+.timeline-highlights {
+  margin-top: $sp-3;
+  margin-bottom: 0;
+  padding-left: $sp-5;
+  list-style: disc;
+
+  li {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: 1.65;
+    margin-bottom: $sp-1;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+// ─── Post list ────────────────────────────────────────────────────────────────
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: $sp-6;
+  padding: $sp-4 0;
+  border-bottom: 1px solid $color-border-subtle;
+
+  &:first-child { border-top: 1px solid $color-border-subtle; }
+
+  .post-date {
+    font-size: $text-xs;
+    color: $color-text-faint;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    min-width: 72px;
+  }
+
+  .post-link {
+    font-size: $text-base;
+    font-weight: 500;
+    color: $color-text;
+    letter-spacing: -0.01em;
+    &:hover { color: $color-accent; }
+  }
+
+  .post-excerpt {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+}
+
+// ─── Contact options ──────────────────────────────────────────────────────────
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $sp-4;
+  margin-top: $sp-8;
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-card {
+  display: block;
+  border: 1px solid $color-border;
+  border-radius: $r-lg;
+  padding: $sp-5 $sp-6;
+  color: $color-text;
+  transition: border-color $t-base, box-shadow $t-base;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text;
+    border-color: $gray-300;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-type {
+    font-size: $text-xs;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text-faint;
+    margin-bottom: $sp-2;
+  }
+
+  .contact-value {
+    font-size: $text-sm;
+    font-weight: 500;
+    color: $color-text;
+  }
+}
+
+// ─── Experience category ──────────────────────────────────────────────────────
+
+.exp-category {
+  & + & {
+    margin-top: $sp-12;
+    padding-top: $sp-12;
+    border-top: 1px solid $color-border-subtle;
+  }
+}
+
+.exp-category-label {
+  font-size: $text-xs;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text-faint;
+  margin-bottom: $sp-8;
+}
+
+// ─── Empty state ──────────────────────────────────────────────────────────────
+
+.empty-state {
+  padding: $sp-12 0;
+  color: $color-text-faint;
+  font-size: $text-sm;
+  line-height: 1.65;
+}
+
+// ─── Resume inline sections ───────────────────────────────────────────────────
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $sp-4;
+  flex-wrap: wrap;
+  margin-bottom: $sp-2;
+
+  .resume-role {
+    font-size: $text-base;
+    font-weight: 600;
+    color: $color-text;
+    letter-spacing: -0.01em;
+  }
+
+  .resume-period {
+    font-size: $text-xs;
+    color: $color-text-faint;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.resume-org {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  margin-bottom: $sp-3;
+}
+
+.resume-block {
+  margin-bottom: $sp-10;
+  padding-bottom: $sp-10;
+  border-bottom: 1px solid $color-border-subtle;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.resume-section-label {
+  font-size: $text-xs;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text-faint;
+  margin-bottom: $sp-6;
+  padding-bottom: $sp-3;
+  border-bottom: 1px solid $color-border;
+}
+
+.skills-row {
+  display: flex;
+  gap: $sp-2;
+  flex-wrap: wrap;
+  margin-bottom: $sp-3;
+
+  .skill-label {
+    font-size: $text-xs;
+    font-weight: 600;
+    color: $color-text-muted;
+    min-width: 80px;
+  }
+
+  .skill-list {
+    font-size: $text-xs;
+    color: $color-text-muted;
+  }
+}

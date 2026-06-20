@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-wrap">
+    <header class="page-header">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">
+        Selected work in treasury analytics, quantitative finance, machine learning, and data engineering.
+      </p>
+    </header>
+
+    <div class="projects-grid">
+      {%- for project in site.data.projects -%}
+      <div class="project-card">
+        <div class="project-header">
+          <h2 class="project-name">{{ project.name | escape }}</h2>
+          {%- if project.status -%}
+          <span class="project-status">{{ project.status }}</span>
+          {%- endif -%}
+        </div>
+        <p class="project-desc">{{ project.description | strip | escape }}</p>
+        <div class="tag-set">
+          {%- for tag in project.tags -%}
+          <span class="tag">{{ tag }}</span>
+          {%- endfor -%}
+        </div>
+        {%- if project.url -%}
+        <a href="{{ project.url }}" class="project-link" target="_blank" rel="noopener noreferrer">
+          View →
+        </a>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-wrap">
+    <header class="page-header">
+      <h1 class="page-title">Experience</h1>
+      <p class="page-subtitle">Professional background and education.</p>
+    </header>
+
+    <div class="exp-category">
+      <p class="exp-category-label">Work</p>
+      <div class="timeline">
+        {%- for item in site.data.experience.work -%}
+        <div class="timeline-item{% if item.current %} is-current{% endif %}">
+          <p class="timeline-period">{{ item.period }}</p>
+          <h2 class="timeline-title">{{ item.title | escape }}</h2>
+          <p class="timeline-org">{{ item.org | escape }} &middot; {{ item.location | escape }}</p>
+          {%- if item.highlights -%}
+          <ul class="timeline-highlights">
+            {%- for h in item.highlights -%}
+            <li>{{ h | escape }}</li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="exp-category">
+      <p class="exp-category-label">Education</p>
+      <div class="timeline">
+        {%- for item in site.data.experience.education -%}
+        <div class="timeline-item">
+          <p class="timeline-period">{{ item.period }}</p>
+          <h2 class="timeline-title">{{ item.title | escape }}</h2>
+          <p class="timeline-org">{{ item.org | escape }} &middot; {{ item.location | escape }}</p>
+          {%- if item.highlights -%}
+          <ul class="timeline-highlights">
+            {%- for h in item.highlights -%}
+            <li>{{ h | escape }}</li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+</div>

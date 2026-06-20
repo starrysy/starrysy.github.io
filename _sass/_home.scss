@@ -1,0 +1,145 @@
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+
+.hero {
+  padding: $sp-20 0 $sp-16;
+
+  @media (min-width: $bp-md) {
+    padding: $sp-24 0 $sp-20;
+  }
+}
+
+.hero-name {
+  font-size: $text-5xl;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: $color-text;
+  margin-bottom: $sp-5;
+
+  @media (max-width: #{$bp-sm - 1px}) {
+    font-size: $text-4xl;
+  }
+}
+
+.hero-tagline {
+  font-size: $text-xl;
+  font-weight: 400;
+  color: $color-text-muted;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  max-width: 480px;
+  margin-bottom: $sp-6;
+
+  @media (max-width: #{$bp-sm - 1px}) {
+    font-size: $text-lg;
+  }
+}
+
+.hero-role {
+  font-size: $text-sm;
+  color: $color-text-faint;
+  margin-bottom: $sp-8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $sp-2;
+  line-height: 1.5;
+
+  .sep {
+    color: $gray-300;
+    user-select: none;
+  }
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-3;
+}
+
+// ─── Home sections ────────────────────────────────────────────────────────────
+
+.home-section {
+  padding: $sp-10 0;
+  border-top: 1px solid $color-border-subtle;
+}
+
+.home-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $sp-6;
+
+  .see-all {
+    font-size: $text-xs;
+    color: $color-text-faint;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    &:hover { color: $color-text-muted; }
+  }
+}
+
+// ─── Compact project cards (home) ─────────────────────────────────────────────
+
+.project-card-sm {
+  border: 1px solid $color-border;
+  border-radius: $r-md;
+  padding: $sp-4 $sp-5;
+  transition: border-color $t-base;
+
+  &:hover { border-color: $gray-300; }
+
+  .project-name-sm {
+    font-size: $text-sm;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: $sp-1;
+    letter-spacing: -0.01em;
+  }
+
+  .project-desc-sm {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    line-height: 1.55;
+    margin-bottom: $sp-3;
+  }
+}
+
+.home-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $sp-3;
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// ─── Compact writing list (home) ──────────────────────────────────────────────
+
+.writing-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: $sp-4;
+  padding: $sp-3 0;
+  border-bottom: 1px solid $color-border-subtle;
+
+  &:first-child { border-top: 1px solid $color-border-subtle; }
+
+  .writing-title {
+    font-size: $text-sm;
+    font-weight: 500;
+    color: $color-text;
+    letter-spacing: -0.01em;
+    &:hover { color: $color-accent; }
+  }
+
+  .writing-date {
+    font-size: $text-xs;
+    color: $color-text-faint;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-wrap">
+    <header class="page-header">
+      <h1 class="page-title">Writing</h1>
+      <p class="page-subtitle">
+        Notes on data science, quantitative finance, AI, and markets.
+      </p>
+    </header>
+
+    {%- if site.posts.size > 0 -%}
+    <ul class="post-list" role="list">
+      {%- for post in site.posts -%}
+      <li class="post-list-item">
+        <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+        <div>
+          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title | escape }}</a>
+          {%- if post.excerpt -%}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          {%- endif -%}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- else -%}
+    <p class="empty-state">Essays and notes — coming soon.</p>
+    {%- endif -%}
+
+  </div>
+</div>

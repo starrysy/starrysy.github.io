@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <a class="site-title" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} — home">
+      {{ site.title | escape }}
+    </a>
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        {%- for item in site.navigation -%}
+        <li>
+          <a href="{{ item.url | relative_url }}"
+             {%- if page.url == item.url %} class="active" aria-current="page"{%- endif -%}>
+            {{ item.title }}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>

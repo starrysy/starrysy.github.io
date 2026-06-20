@@ -1,0 +1,14 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <span class="footer-copy">© {{ 'now' | date: "%Y" }} {{ site.author.name | escape }}</span>
+    <div class="footer-links">
+      {%- if site.github_username -%}
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      {%- endif -%}
+      {%- if site.linkedin_username and site.linkedin_username != "" -%}
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      {%- endif -%}
+      <a href="mailto:{{ site.email }}">Email</a>
+    </div>
+  </div>
+</footer>

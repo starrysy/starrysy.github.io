@@ -1,0 +1,32 @@
+work:
+  - title: Data Scientist, Treasury Markets
+    org: NatWest Group
+    location: London, UK
+    period: "2024 – Present"
+    current: true
+    highlights:
+      - Build data infrastructure for treasury market analytics and real-time position monitoring
+      - Develop quantitative valuation models supporting Independent Price Verification (IPV) processes
+      - Automate pricing workflows and data pipelines, reducing manual intervention in valuation cycles
+      - Design and ship internal data products and monitoring systems used by trading and risk teams
+      - Apply machine learning to market surveillance, anomaly detection, and analytical tooling
+
+education:
+  - title: MSc Data Science
+    org: London School of Economics and Political Science
+    location: London, UK
+    period: "2023 – 2024"
+    highlights:
+      - Statistical learning and inference
+      - Machine learning and optimisation
+      - Data engineering and large-scale computing
+      - Applied research in quantitative methods
+
+  - title: BSc Finance, Accounting and Management
+    org: University of Nottingham
+    location: Nottingham, UK
+    period: "2020 – 2023"
+    highlights:
+      - Quantitative finance and financial modelling
+      - Corporate finance and capital markets
+      - Accounting and management science

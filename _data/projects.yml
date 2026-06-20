@@ -1,0 +1,59 @@
+- name: Treasury Market Analytics Platform
+  description: >-
+    Data infrastructure for monitoring positions, exposures, and P&L across
+    treasury asset classes. Enables real-time reporting and analytical workflows
+    for trading and risk teams.
+  tags: [Python, SQL, Data Engineering, Treasury]
+  domain: Financial Markets
+  status: Professional
+  featured: true
+
+- name: IPV Automation Framework
+  description: >-
+    Automated Independent Price Verification system that streamlines quantitative
+    valuation workflows. Reduces manual intervention in pricing cycles and
+    improves auditability of valuation processes.
+  tags: [Python, Quant Finance, Automation, APIs]
+  domain: Quant Finance
+  status: Professional
+  featured: true
+
+- name: Market Monitoring System
+  description: >-
+    ML-powered monitoring infrastructure for detecting pricing anomalies and
+    behavioural shifts across treasury market data. Built for continuous
+    operation with configurable alerting.
+  tags: [Machine Learning, Python, Monitoring, Alerting]
+  domain: Data Science
+  status: Professional
+  featured: true
+
+- name: Pricing Analytics Engine
+  description: >-
+    Modular engine for financial instrument pricing and valuation analytics.
+    Supports multiple asset classes and valuation methodologies with a
+    clean interface for downstream consumption.
+  tags: [Python, Pricing, Quant Finance, Modelling]
+  domain: Quant Finance
+  status: Professional
+  featured: true
+
+- name: Internal Decision Tooling
+  description: >-
+    Suite of internal tools designed to improve speed and quality of
+    analytical decision making. Combines data pipelines, lightweight
+    dashboards, and automated reporting.
+  tags: [Python, Dashboards, Automation, SQL]
+  domain: Data Products
+  status: Professional
+  featured: false
+
+- name: Portfolio Website
+  description: >-
+    This site — built with Jekyll, deployed on GitHub Pages. Custom design
+    system, mobile-first layout, no frameworks.
+  tags: [Jekyll, SCSS, GitHub Pages]
+  domain: Web
+  status: Open source
+  url: "https://github.com/starrysy/starrysy.github.io"
+  featured: false

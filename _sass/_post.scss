@@ -1,0 +1,88 @@
+// ─── Individual post ──────────────────────────────────────────────────────────
+
+.post {
+  padding-top: $sp-16;
+  padding-bottom: $sp-20;
+}
+
+.post-header {
+  margin-bottom: $sp-10;
+  padding-bottom: $sp-8;
+  border-bottom: 1px solid $color-border-subtle;
+
+  .post-title {
+    font-size: $text-3xl;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: $sp-4;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: $sp-4;
+    font-size: $text-sm;
+    color: $color-text-faint;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.post-content {
+  h2 {
+    font-size: $text-xl;
+    margin-top: $sp-10;
+    margin-bottom: $sp-4;
+  }
+
+  h3 {
+    font-size: $text-lg;
+    margin-top: $sp-8;
+    margin-bottom: $sp-3;
+  }
+
+  p {
+    font-size: $text-base;
+    line-height: 1.8;
+    margin-bottom: $sp-5;
+    color: $color-text;
+  }
+
+  a {
+    color: $color-accent;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    &:hover { color: $color-accent-hover; }
+  }
+
+  img {
+    border-radius: $r-md;
+    margin: $sp-8 auto;
+  }
+
+  ul, ol {
+    margin-bottom: $sp-5;
+    li {
+      font-size: $text-base;
+      line-height: 1.75;
+      color: $color-text;
+    }
+  }
+}
+
+.post-footer {
+  margin-top: $sp-16;
+  padding-top: $sp-8;
+  border-top: 1px solid $color-border;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $sp-4;
+
+  a {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    &:hover { color: $color-text; }
+  }
+}
